@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ],
             [
                 "name" => "根据注册时间查询用户",
-                "query" => "select user_id as '用户ID',phone as '手机号',real_name as '姓名',FROM_UNIXTIME(created_at) as '创建时间' from ch_users where created_at >= UNIX_TIMESTAMP({{start_time}}) and created_at <= UNIX_TIMESTAMP({{end_time}}) and deleted_at is null",
+                "query" => "SELECT user_id as '用户ID',phone as '手机号',real_name as '姓名',FROM_UNIXTIME(created_at) as '创建时间' from ch_users where created_at >= UNIX_TIMESTAMP({{start_time}}) and created_at <= UNIX_TIMESTAMP({{end_time}}) and deleted_at is null",
                 "query_params" => [
                     "start_time" => [
                         "type" => "date",
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ],
             [
                 "name" => "根据订单状态搜索订单信息",
-                "query" => "select borrow_sn as '订单号',real_name as '姓名',borrow_amount as '合同金额',created_at as '签约时间' from ch_borrows where `status` = {{status}} and deleted_at is null",
+                "query" => "SELECT borrow_sn as '订单号',real_name as '姓名',borrow_amount as '合同金额',FROM_UNIXTIME(created_at) as '签约时间' from ch_borrows where `status` = {{status}} and deleted_at is null",
                 "query_params" => [
                     "status" => [
                         "type" => "select",
@@ -70,10 +70,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             ["value" => "12", "label" => "已完成"]
                         ],
                         "description" => "订单状态"
-                    ],
-                    "end_time" => [
-                        "type" => "date",
-                        "description" => "结束时间"
                     ]
                 ]
             ]
