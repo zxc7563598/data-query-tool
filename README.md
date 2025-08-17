@@ -5,6 +5,8 @@
 |-------|-------|-------|
 | <img src="https://raw.githubusercontent.com/zxc7563598/data-query-tool/main/demo/step1.png"> | <img src="https://raw.githubusercontent.com/zxc7563598/data-query-tool/main/demo/step2.png"> | <img src="https://raw.githubusercontent.com/zxc7563598/data-query-tool/main/demo/step3.png"> |
 
+**本项目已经经由 Zread 解析完成，如果需要快速了解项目，可以点击此处进行查看：[了解本项目](https://zread.ai/zxc7563598/data-query-tool)**
+
 ## 初衷
 
 在公司里，经常有运营、老板找你要数据，而很多时候一个 SQL 就能解决的问题，但同事们从来不愿意学 MySQL 或安装工具。  
